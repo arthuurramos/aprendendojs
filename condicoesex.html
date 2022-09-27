@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Condições</title>
+    <style>
+        body {
+            background: black;
+            font: normal 20pt Arial;
+            color: white;
+        }
+        div#inf {
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Países</h1>
+    <p>Qual país você vive?</p>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="CONFIRMAR" onclick="confirma()">
+
+    <div id="inf">
+        Informações:
+    </div>
+
+    <script>
+        var pais = window.document.getElementById('txtpais')
+        var inf = window.document.getElementById('inf')
+        function confirma(){
+        inf.innerText = `Vivendo em ${pais.value}.`
+        if (pais.value != 'Brasil') {
+            inf.innerHTML += (`Então você é estrangeiro.`)
+            // inf.innerHTML
+        } else {
+            inf.innerHTML += (`Então você é brasileiro.`)
+            }
+        }    
+    </script>
+</body>
+</html>
